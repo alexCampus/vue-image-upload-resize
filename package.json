@@ -3,6 +3,28 @@
   "version": "2.3.0",
   "description": "A simple Vue.js component for client-side image upload with resizing",
   "author": "Svale Fossåskaret <svale@3by5.no>",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-lib": "vue-cli-service build --target lib --name vue-image-upload-resize src/components/index.js",
+    "build-wc": "vue-cli-service build --target wc --name vue-image-upload-resize src/components/ImageUploader.vue",
+    "test": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "blueimp-canvas-to-blob": "^3.29.0",
+    "core-js": "^3.8.3",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },
   "files": [
     "dist",
     "src/components/ImageUploader.vue",
@@ -23,31 +45,9 @@
   "browser": {
     "./sfc": "src/ImageUploader.vue"
   },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build-lib": "vue-cli-service build --target lib --name vue-image-upload-resize src/components/index.js",
-    "build-wc": "vue-cli-service build --target wc --name vue-image-upload-resize src/components/ImageUploader.vue",
-    "test": "vue-cli-service test:unit"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexCampus/vue-image-upload-resize.git#vue3"
-  },
-  "dependencies": {
-    "blueimp-canvas-to-blob": "^3.29.0",
-    "core-js": "^3.8.3",
-    "vue": "^3.2.45"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "^5.0.8",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
     "root": true,
