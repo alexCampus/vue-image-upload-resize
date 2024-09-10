@@ -3,6 +3,14 @@
   "version": "2.3.0",
   "description": "A simple Vue.js component for client-side image upload with resizing",
   "author": "Svale Fossåskaret <svale@3by5.no>",
+  "files": ["dist"],
+  "main": "./dist/app.js",
+  "exports": {
+    ".": {
+      "import": "./dist/dtc-din.js",
+      "require": "./dist/dtc-din.umd.cjs"
+    }
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
