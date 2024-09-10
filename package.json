@@ -3,18 +3,33 @@
   "version": "2.3.0",
   "description": "A simple Vue.js component for client-side image upload with resizing",
   "author": "Svale Fossåskaret <svale@3by5.no>",
-  "files": ["dist"],
-  "main": "./dist/app.js",
-  "exports": {
-    ".": {
-      "import": "./dist/dtc-din.js",
-      "require": "./dist/dtc-din.umd.cjs"
-    }
+  "files": [
+    "dist",
+    "src/components/ImageUploader.vue",
+    "src/utils/exif.js"
+  ],
+  "keywords": [
+    "vue",
+    "upload",
+    "uploader",
+    "img",
+    "image",
+    "resize"
+  ],
+  "license": "MIT",
+  "main": "dist/vue-image-upload-resize.umd.js",
+  "module": "dist/vue-image-upload-resize.common.js",
+  "unpkg": "dist/vue-image-upload-resize.umd.min.js",
+  "browser": {
+    "./sfc": "src/ImageUploader.vue"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-lib": "vue-cli-service build --target lib --name vue-image-upload-resize src/components/index.js",
+    "build-wc": "vue-cli-service build --target wc --name vue-image-upload-resize src/components/ImageUploader.vue",
+    "test": "vue-cli-service test:unit"
   },
   "repository": {
     "type": "git",
